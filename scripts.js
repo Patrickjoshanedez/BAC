@@ -44,20 +44,33 @@ const modalImage = document.getElementById('modal-image');
 const modalTitle = document.getElementById('modal-title');
 const modalPrice = document.getElementById('modal-price');
 const modalExtra = document.getElementById('modal-extra');
+const modalStatus = document.getElementById('modal-status');
 const closeButton = document.querySelector('.close-button');
+
+// Map numeric progress values to tracking status texts
+const progressMapping = {
+  "1": "To Pay",
+  "2": "To Ship",
+  "3": "To Receive",
+  "4": "Completed",
+  "5": "Cancelled",
+  "6": "Return/Refund"
+};
 
 document.querySelectorAll('.product-card').forEach(card => {
   card.addEventListener('click', () => {
-    // Populate modal with product details
     const title = card.getAttribute('data-title');
     const price = card.getAttribute('data-price');
     const extra = card.getAttribute('data-extra');
+    const progress = card.getAttribute('data-progress');
     const imgSrc = card.querySelector('img').src;
     
     modalTitle.textContent = title;
     modalPrice.textContent = price;
     modalExtra.textContent = extra;
     modalImage.src = imgSrc;
+    // Update tracking status based on product's data-progress
+    modalStatus.textContent = progressMapping[progress] || "Unknown";
     
     modal.style.display = 'block';
   });
@@ -69,7 +82,7 @@ closeButton.addEventListener('click', () => {
 
 // Close modal when clicking outside modal content
 window.addEventListener('click', (e) => {
-  if(e.target === modal) {
+  if (e.target === modal) {
     modal.style.display = 'none';
   }
 });
