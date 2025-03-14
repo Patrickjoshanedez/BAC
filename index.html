@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Purchase</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Tracking Bar Section -->
+<div class="tracking-wrapper">
+    <div class="tracking">
+      <div id="progress" class="progress-0">
+        <div class="empty-bar"></div>
+        <div class="color-bar"></div>
+        <ul>
+          <li class="bullet-1">
+            <div class="el"><i class='bx bx-check'></i></div>
+            <div class="txt">Order Processed</div>
+          </li>
+          <li class="bullet-2">
+            <div class="el"><i class='bx bx-check'></i></div>
+            <div class="txt">Order Shipped</div>
+          </li>
+          <li class="bullet-3">
+            <div class="el"><i class='bx bx-check'></i></div>
+            <div class="txt">Order En Route</div>
+          </li>
+          <li class="bullet-4">
+            <div class="el"><i class='bx bx-check'></i></div>
+            <div class="txt">Order Arrived</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tracking Controls -->
+  <div class="controls">
+    <div>
+      <button id="prev"><i class='bx bx-chevron-left'></i> Prev</button>
+      <button id="next">Next <i class='bx bx-chevron-right'></i></button>
+    </div>
+    <div>
+      <p>Step: <span id="step">0</span></p>
+    </div>
+  </div>
+
+  <!-- Tab Navigation for My Purchase Section -->
+  <nav class="tabs" role="tablist">
+    <button class="tab-button active" data-tab="all" role="tab" aria-selected="true">All</button>
+    <button class="tab-button" data-tab="to-pay" role="tab" aria-selected="false">To Pay</button>
+    <button class="tab-button" data-tab="to-ship" role="tab" aria-selected="false">To Ship</button>
+    <button class="tab-button" data-tab="to-receive" role="tab" aria-selected="false">To Receive</button>
+    <button class="tab-button" data-tab="completed" role="tab" aria-selected="false">Completed</button>
+    <button class="tab-button" data-tab="cancelled" role="tab" aria-selected="false">Cancelled</button>
+    <button class="tab-button" data-tab="return-refund" role="tab" aria-selected="false">Return/Refund</button>
+  </nav>
+
+  <!-- Tab Content Sections with Product Demonstration -->
+  <!-- All Products Tab -->
+  <section class="tab-content active" id="all" role="tabpanel">
+    <h2>All Products</h2>
+    <div class="products">
+      <div class="product-card" data-title="Product 1" data-price="$10.00" data-extra="">
+        <img src="https://via.placeholder.com/150" alt="Product 1" />
+        <div class="product-info">
+          <h3>Product 1</h3>
+          <p>$10.00</p>
+        </div>
+      </div>
+      <div class="product-card" data-title="Product 2" data-price="$15.00" data-extra="">
+        <img src="https://via.placeholder.com/150" alt="Product 2" />
+        <div class="product-info">
+          <h3>Product 2</h3>
+          <p>$15.00</p>
+        </div>
+      </div>
+      <div class="product-card" data-title="Product 3" data-price="$20.00" data-extra="">
+        <img src="https://via.placeholder.com/150" alt="Product 3" />
+        <div class="product-info">
+          <h3>Product 3</h3>
+          <p>$20.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- To Pay Tab -->
+  <section class="tab-content" id="to-pay" role="tabpanel">
+    <h2>Products To Pay</h2>
+    <div class="products">
+      <div class="product-card" data-title="Product A" data-price="$12.00" data-extra="Payment Due: 24 hrs">
+        <img src="https://via.placeholder.com/150" alt="Product A" />
+        <div class="product-info">
+          <h3>Product A</h3>
+          <p>$12.00</p>
+          <p class="extra-info">Payment Due: 24 hrs</p>
+        </div>
+      </div>
+      <div class="product-card" data-title="Product B" data-price="$18.00" data-extra="Payment Due: 24 hrs">
+        <img src="https://via.placeholder.com/150" alt="Product B" />
+        <div class="product-info">
+          <h3>Product B</h3>
+          <p>$18.00</p>
+          <p class="extra-info">Payment Due: 24 hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- To Ship Tab -->
+  <section class="tab-content" id="to-ship" role="tabpanel">
+    <h2>Products To Ship</h2>
+    <div class="products">
+      <div class="product-card" data-title="Product X" data-price="$22.00" data-extra="Shipping Fee: $5.00">
+        <img src="https://via.placeholder.com/150" alt="Product X" />
+        <div class="product-info">
+          <h3>Product X</h3>
+          <p>$22.00</p>
+          <p class="extra-info">Shipping Fee: $5.00</p>
+        </div>
+      </div>
+      <div class="product-card" data-title="Product Y" data-price="$25.00" data-extra="Shipping Fee: $5.00">
+        <img src="https://via.placeholder.com/150" alt="Product Y" />
+        <div class="product-info">
+          <h3>Product Y</h3>
+          <p>$25.00</p>
+          <p class="extra-info">Shipping Fee: $5.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- To Receive Tab -->
+  <section class="tab-content" id="to-receive" role="tabpanel">
+    <h2>Products To Receive</h2>
+    <div class="products">
+      <div class="product-card" data-title="Product M" data-price="$30.00" data-extra="Expected Delivery: Mar 20, 2025">
+        <img src="https://via.placeholder.com/150" alt="Product M" />
+        <div class="product-info">
+          <h3>Product M</h3>
+          <p>$30.00</p>
+          <p class="extra-info">Expected Delivery: Mar 20, 2025</p>
+        </div>
+      </div>
+      <div class="product-card" data-title="Product N" data-price="$35.00" data-extra="Expected Delivery: Mar 20, 2025">
+        <img src="https://via.placeholder.com/150" alt="Product N" />
+        <div class="product-info">
+          <h3>Product N</h3>
+          <p>$35.00</p>
+          <p class="extra-info">Expected Delivery: Mar 20, 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Completed Tab -->
+  <section class="tab-content" id="completed" role="tabpanel">
+    <h2>Completed Orders</h2>
+    <div class="products">
+      <div class="product-card" data-title="Product Z" data-price="$40.00" data-extra="Rated: 4.5/5">
+        <img src="https://via.placeholder.com/150" alt="Product Z" />
+        <div class="product-info">
+          <h3>Product Z</h3>
+          <p>$40.00</p>
+          <p class="extra-info">Rated: 4.5/5</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cancelled Tab -->
+  <section class="tab-content" id="cancelled" role="tabpanel">
+    <h2>Cancelled Orders</h2>
+    <div class="products">
+      <div class="product-card" data-title="Product Q" data-price="$12.00" data-extra="Order Cancelled - Refund Pending">
+        <img src="https://via.placeholder.com/150" alt="Product Q" />
+        <div class="product-info">
+          <h3>Product Q</h3>
+          <p>$12.00</p>
+          <p class="extra-info">Order Cancelled - Refund Pending</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Return/Refund Tab -->
+  <section class="tab-content" id="return-refund" role="tabpanel">
+    <h2>Return/Refund Orders</h2>
+    <div class="products">
+      <div class="product-card" data-title="Product R" data-price="$18.00" data-extra="Refund Processed: $18.00 refunded">
+        <img src="https://via.placeholder.com/150" alt="Product R" />
+        <div class="product-info">
+          <h3>Product R</h3>
+          <p>$18.00</p>
+          <p class="extra-info">Refund Processed: $18.00 refunded</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <img id="modal-image" src="" alt="Product Image" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-price"></p>
+      <p id="modal-extra"></p>
+    </div>
+  </div>
+
+
+  
+
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
